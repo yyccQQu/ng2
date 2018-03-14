@@ -1,0 +1,60 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "my-app3"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",//存放资源位置
+        "favicon.ico"
+      ],
+      "index": "index.html",//入口文件
+      "main": "main.ts",//主要配置文件
+      "polyfills": "polyfills.ts",//腻子脚本（polyfill）能帮我们把这些不同点进行标准化。
+      "test": "test.ts",//检测文件
+      "tsconfig": "tsconfig.app.json",//ts配置文件
+      "testTsconfig": "tsconfig.spec.json",//测试ts配置文件
+      "prefix": "app",
+      "styles": [
+        "styles.css"//全局样式
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",//环境
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {//给Protractor使用的端到端测试配置文件，当运行ng e2e的时候会用到它。
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}
