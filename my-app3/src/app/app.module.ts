@@ -9,16 +9,17 @@ import { AppComponent } from './app.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
 //import { HeroesComponent }      from './heroes/heroes.component';
 
+//Component在declarations中的，Module在import中的
 @NgModule({
   declarations: [
     AppComponent,
     //FormsModule,
-    AppRoutingModule
+    DashboardComponent
 
   ],
   imports: [
     BrowserModule,
-    DashboardComponent
+    AppRoutingModule
     // HeroesComponent,
     // HeroDetailComponent,
     // MessagesComponent,

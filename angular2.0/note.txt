@@ -1,0 +1,2 @@
+﻿cnpm install @types/bootstrap --save-dev ng2添加外部依赖模块
+ng g component navbar   打包生成组件
